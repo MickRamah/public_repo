@@ -1,20 +1,41 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app
+  name: static-site
   namespace: dev
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: app
+      app: static-site
   template:
     metadata:
       labels:
-        app: app
+        app: static-site
     spec:
       containers:
-        - name: app
+        - name: static-site
+          image: mickramah/playground:v1
+          ports:
+            - containerPort: 80
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: static-site
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: static-site
+  template:
+    metadata:
+      labels:
+        app: static-site
+    spec:
+      containers:
+        - name: static-site
           image: mickramah/playground:v1
           ports:
             - containerPort: 80
