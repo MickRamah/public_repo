@@ -1,0 +1,12 @@
+const bar_menu = document.querySelector(".bar_de_menu")
+    const menu = document.querySelector(".header_list")
+    const header_list_1 = document.querySelector(".header_list_1")
+    const header_list_2 = document.querySelector(".header_list_2")
+    const header_list_3 = document.querySelector(".header_list_3")
+    const header_list_4 = document.querySelector(".header_list_4")
+
+    bar_menu.addEventListener('click',()=>{menu.classList.toggle('menu_mobile')})
+    header_list_1.addEventListener('click',()=>{menu.classList.toggle('menu_mobile')})
+    header_list_2.addEventListener('click',()=>{menu.classList.toggle('menu_mobile')})
+    header_list_3.addEventListener('click',()=>{menu.classList.toggle('menu_mobile')})
+    header_list_4.addEventListener('click',()=>{menu.classList.toggle('menu_mobile')})
