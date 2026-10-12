@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: static-site
-          image: mickramah/playground:v2
+          image: mickramah/playground:v1
           ports:
             - containerPort: 80
